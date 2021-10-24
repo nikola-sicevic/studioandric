@@ -42,11 +42,10 @@ header{
 /* mobile navigation */
 
 .menu-sm{
-    /* display: none; */
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    display: flex;
     z-index: 2;
 }
 
