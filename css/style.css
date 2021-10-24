@@ -1,3 +1,15 @@
+/* IMPORT FONTS */
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+}
+
 /* VARIABLES */
 
 :root{
@@ -7,13 +19,17 @@
     --shadow: #E8E8E8;
     --shadow-dark: #C4C4C4;
     --gray-letter: #E0E0E0;
+    --gray-box: #E6E6E6;
+    /* fonts */
+    --roboto-bold: "RobotoBold", Arial, Helvetica, sans-serif;
+    --roboto-regular: "RobotoRegular", Arial, Helvetica, sans-serif;
 }
 
 /* GLOBAL STYLES */
 
 body{
     margin: 0;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: var(--roboto-bold);
 }
 
 a{
@@ -40,6 +56,10 @@ h3{
     color: var(--gray-letter);
     transform: rotate(-90deg);
     font-size: 59px;
+}
+
+p{
+    margin: 0;
 }
 
 /* SPECIFIC STYLES */
@@ -133,6 +153,7 @@ header{
 /* PAGES */
 
 /* home page */
+
 #home-black{
     width: 100vw;
     height: 100vh;
@@ -163,6 +184,70 @@ header{
     border-radius: 50%;
     text-align: center;
     line-height: 28px;
+}
+
+/* section for the content of the home page */
+
+#home-content{
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-content .andric{
+    margin: 5rem 0 2rem 0;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-content .andric img:first-child,
+#home-content .andric img:last-child{
+    position: absolute;
+}
+
+#home-content .andric img:first-child{
+    top: 24px;
+    left: -10px;
+}
+
+#home-content .home-intro{
+    font-family: var(--roboto-regular);
+    font-size: 15px;
+}
+
+#home-content .home-action{
+    width: 100%;
+    height: 170px;
+    font-size: 20px;
+    margin-top: 7.5rem;
+    position: relative;
+}
+
+#home-content .home-action p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#home-content .home-action .background{
+    width: 215px;
+    height: 134px;
+    position: absolute;
+    background-color: var(--gray-box);
+    bottom: -1.15rem;
+    left: -2rem;
+    z-index: 1;
+}
+
+#home-content a{
+    margin: 3rem 0;
+    align-self: flex-start;
 }
 
 /* graphic design page */
