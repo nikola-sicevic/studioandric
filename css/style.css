@@ -1,12 +1,16 @@
 /* VARIABLES */
+
 :root{
     /* colors */
     --black: #000000;
     --white: #ffffff;
     --shadow: #E8E8E8;
+    --shadow-dark: #C4C4C4;
+    --gray-letter: #E0E0E0;
 }
 
 /* GLOBAL STYLES */
+
 body{
     margin: 0;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -24,9 +28,24 @@ ul{
     padding: 0;
 }
 
+section{
+    padding: 0 2rem;
+}
+
+h1, h2, h3{
+    margin: 0;
+}
+
+h3{
+    color: var(--gray-letter);
+    transform: rotate(-90deg);
+    font-size: 59px;
+}
+
 /* SPECIFIC STYLES */
 
 /* mobile header */
+
 header{
     position: fixed;
     width: calc(100% - 4rem);
@@ -37,6 +56,8 @@ header{
     align-items: center;
     box-shadow: 0 3px 3px 0 var(--shadow);
     font-size: 12px;
+    background-color: var(--white);
+    z-index: 1;
 }
 
 /* mobile navigation */
@@ -106,4 +127,123 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
+
+/* PAGES */
+
+/* graphic design page */
+
+/* graphic info section */
+#graphic-info{
+    display: flex;
+    width: calc(100vw - 4rem);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#graphic-info p{
+    margin-top: 37px;
+    font-size: 20px;
+}
+
+/* graphic logos section */
+#graphic-logos{
+    padding: 0;
+}
+
+#graphic-logos ul li{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#graphic-logos ul li p{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 14px;
+}
+
+/* graphic menus sections */
+#graphic-menus{
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#graphic-menus ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#graphic-menus ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .25rem;
+    position: relative;
+}
+
+#graphic-menus ul li:nth-child(odd){
+    margin-right: .25rem;
+}
+
+#graphic-menus h3{
+    position: absolute;
+    top: 3.5rem;
+    left: -5rem;
+}
+
+/* graphic books section */
+#graphic-books{
+    margin: 7.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+#graphic-books h3{
+    font-size: 40px;
+    position: absolute;
+    top: 1.5rem;
+    left: -1rem;
+    text-shadow: -4px 5px 8px var(--shadow-dark);
+}
+
+/* graphic end section */
+#graphic-end{
+    padding: 0;
+    margin-bottom: 7.5rem;
+}
+
+#graphic-end p:first-child{
+    font-size: 30px;
+    margin-left: 4rem;
+    letter-spacing: 1px;
+}
+
+#graphic-end p:last-child{
+    font-size: 15px;
+    margin-left: 4rem;
+    position: relative;
+}
+
+#graphic-end p:last-child .line{
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 36px;
+    height: 2px;
+    background-color: var(--black);
+}
+
+
