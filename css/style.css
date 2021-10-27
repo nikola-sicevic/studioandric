@@ -141,6 +141,7 @@ header{
 }
 
 /* home section */
+
 .home-white{
     width: 100vw;
     height: 100vh;
@@ -314,6 +315,11 @@ header{
 }
 
 /* graphic logos section */
+
+.light{
+    font-family: var(--roboto-regular);
+}
+
 #graphic-logos{
     padding: 0;
 }
@@ -336,6 +342,7 @@ header{
 }
 
 /* graphic menus sections */
+
 #graphic-menus{
     padding: 0 3rem;
     display: flex;
@@ -368,6 +375,7 @@ header{
 }
 
 /* graphic books section */
+
 #graphic-books{
     margin: 7.5rem 0;
     display: flex;
@@ -385,6 +393,7 @@ header{
 }
 
 /* graphic end section */
+
 #graphic-end{
     padding: 0;
     margin-bottom: 7.5rem;
