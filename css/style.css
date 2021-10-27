@@ -250,9 +250,56 @@ header{
     align-self: flex-start;
 }
 
+/* web design page */
+
+/* projects section */
+
+#projects{
+    padding: 5rem 2.5rem;
+    height: -webkit-fill-available;
+    height: -moz-fill-available;
+}
+
+#projects .project{
+    position: relative;
+    width: 100%;
+}
+
+#projects .project .project-full-page,
+#projects .project .project-landing-section{
+    position: absolute;
+}
+
+#projects .project .project-full-page{
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0px 2px 15px 2px var(--shadow-dark);
+}
+
+#projects .project .project-landing-section{
+    top: 73px;
+    right: 0;
+    z-index: 2;
+}
+
+#projects .project .project-landing-section img{
+    position: absolute;
+}
+
+#projects .project .project-landing-section img:first-child{
+    right: 0;
+}
+
+#projects .project .project-landing-section img:last-child{
+    right: 7px;
+    top: 7px;
+}
+
 /* graphic design page */
 
 /* graphic info section */
+
 #graphic-info{
     display: flex;
     width: calc(100vw - 4rem);
