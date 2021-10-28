@@ -31,6 +31,7 @@ body{
     margin: 0;
     font-family: var(--roboto-bold);
     min-width: 360px;
+    min-height: 640px;
 }
 
 a{
@@ -167,7 +168,7 @@ header{
     padding: 0;
 }
 
-#home-black img:nth-child(2){
+#home-black picture:nth-child(2) img{
     position: absolute;
     top: .75rem;
     left: 1rem;
@@ -190,64 +191,79 @@ header{
 
 /* section for the content of the home page */
 
-#home-content{
+#home-about{
     padding: 0 4rem;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-#home-content .andric{
-    margin: 5rem 0 2rem 0;
+#home-about .page-nav {
+    display: none;
+}
+
+#home-about .next-page {
+    display: none;
+}   
+
+#home-about .andric{
+    margin-bottom: 2rem;
     position: relative;
-    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-#home-content .andric img:first-child{
+#home-about .andric picture:first-child img{
     position: absolute;
-}
-
-#home-content .andric img:first-child{
-    top: 24px;
+    top: 15px;
     left: -18px;
 }
 
-#home-content .home-intro{
+#home-about p{
+    width: 200px;
     font-family: var(--roboto-regular);
     font-size: 15px;
 }
 
-#home-content .home-action{
-    width: 100%;
-    height: 170px;
-    font-size: 20px;
-    margin-top: 7.5rem;
-    position: relative;
+#home-contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 4rem;
 }
 
-#home-content .home-action p{
+#home-contact .text{
+    position: relative;
+    height: 170px;
+    width: 200px;
+}
+
+#home-contact p{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 }
 
-#home-content .home-action .background{
+#home-contact .background{
     width: 215px;
     height: 134px;
     position: absolute;
     background-color: var(--gray-box);
-    bottom: -1.15rem;
-    left: -2rem;
+    bottom: -2px;
+    left: -45px;
     z-index: 1;
 }
 
-#home-content a{
-    margin: 3rem 0;
-    align-self: flex-start;
+#home-contact a{
+    margin-top: -170px;
+    margin-right: -25px;
+    align-self: center;
 }
 
 /* web design page */
@@ -402,8 +418,134 @@ header{
     background-color: var(--black);
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES MOBILE */
+
+@media only screen and (max-width: 767px) {
+    #header-lg{
+        display: none;
+    }
+
+    #header-sm{
+        position: absolute;
+        bottom: -37px;
+    }
+}
+
+/* MEDIA QUERIES - DESKTOP */
 
 @media only screen and (min-width: 768px) {
+    /* home page desktop */
 
+    #header-sm{
+        display: none;
+    }
+
+    #header-lg{
+        width: calc(100% - 10rem);
+        box-shadow: none;
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+        padding: 3rem 5rem;
+        justify-content: flex-end;
+    }
+
+    #header-lg nav ul li{
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    #header-lg nav ul li a{
+        color: white;
+    }
+
+    #home-black picture:nth-child(1) img{
+        transform: translateY(-20%);
+    }
+
+    #home-black picture:nth-child(2) img{
+        top: 1.75rem;
+        left: 6rem;
+    }
+
+    #home-black a{
+        font-size: 13px;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+    }
+
+    #home-about .page-nav {
+        display: block;
+        
+        position: absolute;
+        bottom: 2rem;
+        left: 6rem;
+        font-size: 57px;
+        font-family: var(--roboto-regular);
+    }   
+
+    #home-about .next-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 2rem;
+        right: 6rem;
+        width: 89px;
+        height: 89px;
+        border-radius: 50%;
+        border: 3px solid var(--black);
+    }   
+
+    #home-about .next-page span:first-child{
+        font-size: 22px;
+        text-decoration: underline;
+        line-height: 22px;
+    }   
+
+    #home-about .next-page span:last-child{
+        font-size: 17px;
+        font-family: var(--roboto-regular);
+    }   
+    
+    #home-about .page-nav ul li:last-child{
+        opacity: 0.5;
+    }   
+
+    #home-about .andric{
+        margin-bottom: 5rem;
+    }
+
+    #home-about .andric picture:first-child img{
+        top: 56px;
+        left: -69px;
+    }
+
+    #home-about p{
+        width: 500px;
+        font-size: 30px;
+    }
+    
+    #home-contact .text{
+        height: 336px;
+        width: 500px;
+    }
+    
+    #home-contact p{
+        font-size: 40px;
+    }
+    
+    #home-contact .background{
+        width: 487px;
+        height: 329px;
+        bottom: -90px;
+        left: -170px;
+    }
+    
+    #home-contact a{
+        margin-top: -190px;
+        margin-right: -550px;
+    }
 }
