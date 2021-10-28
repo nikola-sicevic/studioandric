@@ -18,6 +18,7 @@
     <script src="js/app.js"></script>
 </head>
 <body>
+    <!-- Manu for small screens -->
     <div class="menu-sm" id="menu-sm">
         <div class="menu-left">
             <img src="img/logo_vert_sm.png" alt="Andric logo vertical">
@@ -36,23 +37,57 @@
             <a href="mailto:studioandric@gmail.com" class="menu-sm-contact">studioandric@gmail.com</a>
         </div>
     </div>
-    <header>
+
+    <!-- Header for large screens -->
+    <header class="header-lg" id="header-lg">
+        <img src="img/logo_menu_lg.png" alt="Logo header">
+
+        <nav class="inverse">
+            <ul>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="web_design.html">Web design</a></li>
+                <li><a href="graphic_design.html">Graphic design</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Header for small screens -->
+    <header class="header-sm" id="header-sm">
         <a href="index.html">
             <img src="img/logo_menu_sm.png" alt="Andric logo mobile">
         </a>
         <a href="#" class="btn-menu-open" id="btn-menu-open">Menu</a>
     </header>
+    
     <section class="home-white" id="home-white">
-        <img src="img/logo_home_sm.png" alt="Andric logo home">
+        <picture>
+            <source media="(min-width: 768px)" srcset="img/logo_home_lg.png">
+            <img src="img/logo_home_sm.png" alt="Logo home">
+        </picture>
     </section>
+
     <section class="projects" id="projects">
         <div class="project" id="project">
             <div class="project-full-page" id="project-full-page">
-                <img src="img/web/listovi_nepokretnosti_page_sm.png" alt="Listovi nepokretnosti page">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_page_lg.png">
+                    <img src="img/web/listovi_nepokretnosti_page_sm.png" alt="Listovi nepokretnosti page">
+                </picture>
             </div>
             <div class="project-landing-section" id="project-landing-section">
-                <img src="img/computer_sm.png" alt="Computer">
-                <img src="img/web/listovi_nepokretnosti_sm.png" alt="Listovi nepokretnosti landing">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/computer_lg.png">
+                    <img src="img/computer_sm.png" alt="Computer">
+                </picture>
+
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_lg.png">
+                    <img src="img/web/listovi_nepokretnosti_sm.png" alt="Listovi nepokretnosti landing">
+                </picture>
+            </div>
+
+            <div class="web-design" id="web-design">
+                <img src="img/web/web_design_lg.png" alt="Web design">
             </div>
         </div>
     </section>

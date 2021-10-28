@@ -271,14 +271,20 @@ header{
 /* projects section */
 
 #projects{
-    padding: 5rem 2.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
 }
 
 #projects .project{
     position: relative;
-    margin-left: -47.5%;
+    transform: translateX(-75px);
+    width: 135px;
+}
+
+#projects .project .web-design{
+    display: none;
 }
 
 #projects .project .project-landing-section{
@@ -287,7 +293,11 @@ header{
     left: 90px;
 }
 
-#projects .project .project-landing-section img:last-child{
+#projects .project .project-full-page{
+    box-shadow: 0 2px 20px 0 var(--shadow-dark);
+}
+
+#projects .project .project-landing-section picture:last-child img{
     position: absolute;
     top: 7px;
     left: 7px;
@@ -424,17 +434,12 @@ header{
     #header-lg{
         display: none;
     }
-
-    #header-sm{
-        position: absolute;
-        bottom: -37px;
-    }
 }
 
 /* MEDIA QUERIES - DESKTOP */
 
 @media only screen and (min-width: 768px) {
-    /* home page desktop */
+    /* header desktop */
 
     #header-sm{
         display: none;
@@ -444,10 +449,10 @@ header{
         width: calc(100% - 10rem);
         box-shadow: none;
         background-color: transparent;
-        color: white;
+        color: var(--white);
         font-size: 20px;
         padding: 3rem 5rem;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     #header-lg nav ul li{
@@ -458,6 +463,12 @@ header{
     #header-lg nav ul li a{
         color: white;
     }
+
+    #header-lg nav.inverse ul li a{
+        color: var(--black);
+    }
+
+    /* home page desktop */
 
     #home-black picture:nth-child(1) img{
         transform: translateY(-20%);
@@ -477,7 +488,6 @@ header{
 
     #home-about .page-nav {
         display: block;
-        
         position: absolute;
         bottom: 2rem;
         left: 6rem;
@@ -547,5 +557,36 @@ header{
     #home-contact a{
         margin-top: -190px;
         margin-right: -550px;
+    }
+
+    /* web design page desktop */
+    
+    #projects .project{
+        transform: translateX(-450px);
+        width: 447px;
+    }
+
+    #projects .project .web-design{
+        display: block;
+        position: absolute;
+        top: 65px;
+        left: -70px;
+        z-index: 1;
+    }
+
+    #projects .project .project-full-page{
+        position: absolute;
+        z-index: 2;
+    }
+    
+    #projects .project .project-landing-section{
+        top: 75px;
+        left: 356px;
+        z-index: 2;
+    }
+    
+    #projects .project .project-landing-section picture:last-child img{
+        top: 23px;
+        left: 23px;
     }
 }
