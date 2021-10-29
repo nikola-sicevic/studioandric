@@ -13,11 +13,23 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Page specific CSS -->
+    <style>
+        @media only screen and (min-width: 768px) {
+            /* header desktop */
+
+            #header-lg img{
+                margin-bottom: -120px;
+            }
+        }
+    </style>
+
     <!-- JS -->
     <script src="js/jquery.js"></script>
     <script src="js/app.js"></script>
 </head>
 <body>
+    <!-- Menu for small screens -->
     <div class="menu-sm" id="menu-sm">
         <div class="menu-left">
             <img src="img/logo_vert_sm.png" alt="Andric logo vertical">
@@ -36,15 +48,35 @@
             <a href="mailto:studioandric@gmail.com" class="menu-sm-contact">studioandric@gmail.com</a>
         </div>
     </div>
-    <header>
+
+    <!-- Header for large screens -->
+    <header class="header-lg" id="header-lg">
+        <img src="img/logo_vert_lg.png" alt="Logo header">
+
+        <nav class="inverse">
+            <ul>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="web_design.html">Web design</a></li>
+                <li><a href="graphic_design.html">Graphic design</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Header for small screens -->
+    <header class="header-sm" id="header-sm">
         <a href="index.html">
             <img src="img/logo_menu_sm.png" alt="Andric logo mobile">
         </a>
         <a href="#" class="btn-menu-open" id="btn-menu-open">Menu</a>
     </header>
+
     <section class="home-white" id="home-white">
-        <img src="img/logo_home_sm.png" alt="Andric logo home">
+        <picture>
+            <source media="(min-width: 768px)" srcset="img/logo_home_lg.png">
+            <img src="img/logo_home_sm.png" alt="Logo home">
+        </picture>
     </section>
+
     <section class="graphic-info" id="graphic-info">
         <p>
             We believe that simplicity is the key to everything. 
@@ -52,55 +84,138 @@
             We believe that white space between the elements creates the design as the pauses between the notes create a melody.
         </p>
     </section>
+
     <section class="graphic-logos" id="graphic-logos">
         <ul>
             <li>
-                <img src="img/graphic/logos/ana_nikolic_sm.png" alt="Ana Nikolic">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/graphic/logos/ana_nikolic_lg.png">
+                    <img src="img/graphic/logos/ana_nikolic_sm.png" alt="Ana Nikolic Logo">
+                </picture>
                 <p><span class="light">client</span> Ana Nikolić</p>
             </li>
             <li>
-                <img src="img/graphic/logos/zeljka_ulemek_sm.png" alt="Zeljka Ulemek">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/graphic/logos/zeljka_ulemek_lg.png">
+                    <img src="img/graphic/logos/zeljka_ulemek_sm.png" alt="Zeljka Ulemek Logo">
+                </picture>
                 <p><span class="light">client</span> Željka Ulemek</p>
             </li>
             <li>
-                <img src="img/graphic/logos/viathlete_sm.png" alt="Aleksandar Markovic">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/graphic/logos/viathlete_lg.png">
+                    <img src="img/graphic/logos/viathlete_sm.png" alt="Aleksandar Markovic Logo">
+                </picture>
                 <p><span class="light">client</span> Aleksandar Marković</p>
             </li>
             <li>
-                <img src="img/graphic/logos/zlatibor_sm.png" alt="Nevena Grujicic">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/graphic/logos/zlatibor_lg.png">
+                    <img src="img/graphic/logos/zlatibor_sm.png" alt="Nevena Grujicic Logo">
+                </picture>
                 <p><span class="light">client</span> Nevena Grujičić</p>
             </li>
             <li>
-                <img src="img/graphic/logos/stefanovic_sm.png" alt="Cedomir Stefanovic">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/graphic/logos/stefanovic_lg.png">
+                    <img src="img/graphic/logos/stefanovic_sm.png" alt="Cedomir Stefanovic Logo">
+                </picture>
                 <p><span class="light">client</span> Čedomir Stefanović</p>
             </li>
         </ul>
     </section>
+
     <section class="graphic-menus" id="graphic-menus">
         <div class="menus-wrapper">
             <h3>Turist</h3>
             <ul>
-                <li><img src="img/graphic/turist/1_sm.png" alt="Menu Turist 1"></li>
-                <li><img src="img/graphic/turist/2_sm.png" alt="Menu Turist 2"></li>
-                <li><img src="img/graphic/turist/3_sm.png" alt="Menu Turist 3"></li>
-                <li><img src="img/graphic/turist/4_sm.png" alt="Menu Turist 4"></li>
-                <li><img src="img/graphic/turist/5_sm.png" alt="Menu Turist 5"></li>
-                <li><img src="img/graphic/turist/6_sm.png" alt="Menu Turist 6"></li>
-                <li><img src="img/graphic/turist/7_sm.png" alt="Menu Turist 7"></li>
-                <li><img src="img/graphic/turist/8_sm.png" alt="Menu Turist 8"></li>
-                <li><img src="img/graphic/turist/9_sm.png" alt="Menu Turist 9"></li>
-                <li><img src="img/graphic/turist/10_sm.png" alt="Menu Turist 10"></li>
-                <li><img src="img/graphic/turist/11_sm.png" alt="Menu Turist 11"></li>
-                <li><img src="img/graphic/turist/12_sm.png" alt="Menu Turist 12"></li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/1_lg.png">
+                        <img src="img/graphic/turist/1_sm.png" alt="Menu Turist 1">
+                    </picture>
+                    
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/2_lg.png">
+                        <img src="img/graphic/turist/2_sm.png" alt="Menu Turist 2">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/3_lg.png">
+                        <img src="img/graphic/turist/3_sm.png" alt="Menu Turist 3">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/4_lg.png">
+                        <img src="img/graphic/turist/4_sm.png" alt="Menu Turist 4">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/5_lg.png">
+                        <img src="img/graphic/turist/5_sm.png" alt="Menu Turist 5">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/6_lg.png">
+                        <img src="img/graphic/turist/6_sm.png" alt="Menu Turist 6">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/7_lg.png">
+                        <img src="img/graphic/turist/7_sm.png" alt="Menu Turist 7">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/8_lg.png">
+                        <img src="img/graphic/turist/8_sm.png" alt="Menu Turist 8">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/9_lg.png">
+                        <img src="img/graphic/turist/9_sm.png" alt="Menu Turist 9">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/10_lg.png">
+                        <img src="img/graphic/turist/10_sm.png" alt="Menu Turist 10">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/11_lg.png">
+                        <img src="img/graphic/turist/11_sm.png" alt="Menu Turist 11">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/graphic/turist/12_lg.png">
+                        <img src="img/graphic/turist/12_sm.png" alt="Menu Turist 12">
+                    </picture>
+                </li>
             </ul>
         </div>
     </section>
+
     <section class="graphic-books" id="graphic-books">
         <div>
             <h3>Moj svet</h3>
-            <img src="img/graphic/books/moj_svet_sm.png" alt="Moj svet">
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/graphic/books/moj_svet_lg.png">
+                <img src="img/graphic/books/moj_svet_sm.png" alt="Moj svet">
+            </picture>
         </div>
     </section>
+    
     <section class="grpahic-end" id="graphic-end">
         <p>
             That's all folks. <br>

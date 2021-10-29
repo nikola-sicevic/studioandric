@@ -318,6 +318,7 @@ header{
 #graphic-info p{
     margin-top: 37px;
     font-size: 20px;
+    width: 286px;
 }
 
 /* graphic logos section */
@@ -350,7 +351,7 @@ header{
 /* graphic menus sections */
 
 #graphic-menus{
-    padding: 0 3rem;
+    padding: 20rem 3rem 10rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -588,5 +589,66 @@ header{
     #projects .project .project-landing-section picture:last-child img{
         top: 23px;
         left: 23px;
+    }
+
+    /* graphic design page desktop */
+
+    #graphic-info p{
+        width: 886px;
+        font-size: 50px;
+        transform: translateX(275px);
+    }
+
+    #graphic-logos ul li p{
+        right: 2rem;
+        font-size: 14px;
+        bottom: 7.5rem;
+    }
+
+    #graphic-logos ul li p{
+        font-size: 18px;
+        transform: rotate(-90deg);
+    }
+
+    #graphic-menus{
+        padding: 20rem 3rem;
+    }
+
+    #graphic-menus .menus-wrapper{
+        width: 948px;
+    }
+    
+    #graphic-menus .menus-wrapper h3{
+        font-size: 185px;
+        transform: rotate(0);
+        top: 550px;
+        left: -300px;
+    }
+
+    #graphic-books h3{
+        font-size: 185px;
+        top: 145px;
+        left: -390px;
+    }
+
+    #graphic-end{
+        margin-top: 15rem;
+    }
+    
+    #graphic-end p:first-child{
+        font-size: 100px;
+        letter-spacing: 2px;
+    }
+    
+    #graphic-end p:last-child{
+        margin-top: 7.5rem;
+        font-size: 20px;
+    }
+    
+    #graphic-end p:last-child .line{
+        bottom: -16px;
+        left: 0;
+        width: 56px;
+        height: 3px;
     }
 }
