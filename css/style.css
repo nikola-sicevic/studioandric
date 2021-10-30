@@ -190,7 +190,7 @@ header{
 
 #home-about{
     padding: 0 4rem;
-    height: 100vh;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,8 +226,9 @@ header{
 }
 
 #home-contact{
-    height: 100vh;
+    height: 500px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -259,7 +260,7 @@ header{
 }
 
 #home-contact a{
-    margin-top: -170px;
+    margin-top: -80px;
     margin-right: -10px;
     align-self: center;
 }
@@ -291,11 +292,15 @@ header{
     left: 90px;
 }
 
+#projects .project .project-landing-section .web-text{
+    display: none;
+}
+
 #projects .project .project-full-page{
     box-shadow: 0 2px 20px 0 var(--shadow-dark);
 }
 
-#projects .project .project-landing-section picture:last-child img{
+#projects .project .project-landing-section picture:nth-child(2) img{
     position: absolute;
     top: 7px;
     left: 7px;
@@ -476,8 +481,7 @@ header{
     }
 
     #home-black picture:nth-child(2) img{
-        top: 1.75rem;
-        left: 6rem;
+        display: none;
     }
 
     #home-black a{
@@ -485,6 +489,17 @@ header{
         width: 56px;
         height: 56px;
         line-height: 56px;
+    }
+
+    #home-about{
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    #home-about .about-logo{
+        position: absolute;
+        top: 2rem;
+        left: 6rem;
     }
 
     #home-about .page-nav {
@@ -538,6 +553,10 @@ header{
         width: 500px;
         font-size: 30px;
     }
+
+    #home-contact{
+        height: 100vh;
+    }
     
     #home-contact .text{
         margin-top: -60px;
@@ -586,8 +605,19 @@ header{
         left: 356px;
         z-index: 2;
     }
+
+    #projects .project .project-landing-section .web-text{
+        display: block;
+        width: 530px;
+        position: absolute;
+        bottom: -110px;
+        left: 220px;
+        font-family: var(--roboto-regular);
+        font-size: 20px;
+        line-height: 20px;
+    }
     
-    #projects .project .project-landing-section picture:last-child img{
+    #projects .project .project-landing-section picture:nth-child(2) img{
         top: 23px;
         left: 23px;
     }
