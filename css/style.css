@@ -213,10 +213,8 @@ header{
     align-items: center;
 }
 
-#home-about .andric picture:first-child img{
-    position: absolute;
-    top: 15px;
-    left: -18px;
+#home-about .about-logo{
+    display: none;
 }
 
 #home-about p{
@@ -407,21 +405,22 @@ header{
 /* graphic end section */
 
 #graphic-end{
-    padding: 0;
-    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
 }
 
 #graphic-end p:first-child{
     font-size: 30px;
     line-height: 28px;
-    margin-left: 4rem;
     letter-spacing: 1px;
 }
 
 #graphic-end p:last-child{
     font-size: 15px;
     margin-top: 5rem;
-    margin-left: 4rem;
     position: relative;
 }
 
@@ -497,6 +496,7 @@ header{
     }
 
     #home-about .about-logo{
+        display: block;
         position: absolute;
         top: 2rem;
         left: 6rem;
@@ -665,27 +665,18 @@ header{
         top: 145px;
         left: -390px;
     }
-
-    #graphic-end{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100vh;
-        margin-top: 15rem;
-        margin-bottom: 0;
-        padding: 0 10rem;
-    }
     
     #graphic-end p:first-child{
         font-size: 100px;
         line-height: 80px;
         letter-spacing: 2px;
+        margin-left: 4rem;
     }
     
     #graphic-end p:last-child{
         margin-top: 7.5rem;
         font-size: 20px;
+        margin-left: 4rem;
     }
     
     #graphic-end p:last-child .line{
