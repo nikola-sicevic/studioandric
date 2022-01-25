@@ -17,8 +17,19 @@ $( document ).ready(function() {
         });
     });
 
-    // logo fade in
+    // Logo fade in
     setTimeout(() => {
         $(".fade-in").fadeIn(2000);
     }, 500);
+
+    // Animate to the next section when clicked on "more" on the home page
+
+    $('.scroller').on("click", function (e) {
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $("#home-about").offset().top
+        }, 500);
+
+    });
 });
