@@ -16,4 +16,9 @@ $( document ).ready(function() {
             "display": "none"
         });
     });
+
+    // logo fade in
+    setTimeout(() => {
+        $(".fade-in").fadeIn(2000);
+    }, 500);
 });

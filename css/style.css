@@ -10,6 +10,11 @@
     src: url(../fonts/Roboto/Roboto-Black.ttf);
 }
 
+/* ANIMATIONS */
+.fade-in{
+    display: none;
+}
+
 /* VARIABLES */
 
 :root{
