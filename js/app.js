@@ -1,4 +1,9 @@
 $( document ).ready(function() {
+    // Initialize AOS for fade in animations
+    AOS.init({
+        duration: 1200
+    })
+
     // Open navigation for mobile phones
     $('#btn-menu-open').click(function(e) {
         e.preventDefault();
@@ -19,17 +24,15 @@ $( document ).ready(function() {
 
     // Logo fade in
     setTimeout(() => {
-        $(".fade-in").fadeIn(2000);
-    }, 500);
+        $(".fade-in").fadeIn(1250);
+    }, 300);
 
     // Animate to the next section when clicked on "more" on the home page
-
     $('.scroller').on("click", function (e) {
         e.preventDefault();
 
         $('html, body').animate({
             scrollTop: $("#home-about").offset().top
         }, 500);
-
     });
 });
