@@ -203,11 +203,15 @@ header{
     position: relative;
 }
 
-#home-about .page-nav {
+.wrap-sticky .about-logo{
     display: none;
 }
 
-#home-about .next-page {
+.wrap-sticky .page-nav {
+    display: none;
+}
+
+.wrap-sticky .next-page {
     display: none;
 }   
 
@@ -216,10 +220,6 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-}
-
-#home-about .about-logo{
-    display: none;
 }
 
 #home-about p{
@@ -500,50 +500,56 @@ header{
         margin-top: 0;
     }
 
-    #home-about .about-logo{
-        display: block;
-        position: absolute;
-        top: 2rem;
-        left: 6rem;
+    .wrap-sticky .sticky-element {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1000;
+        width: fit-content;
     }
 
-    #home-about .page-nav {
+    .wrap-sticky .about-logo{
         display: block;
-        position: absolute;
-        bottom: 2rem;
-        left: 6rem;
+        top: 5rem;
+        margin-top: 5rem;
+        margin-left: 5rem;
+        
+    }
+
+    .wrap-sticky .page-nav {
+        display: block;
         font-size: 57px;
         font-family: var(--roboto-regular);
-    }   
+        top: calc(100vh - 15rem);
+        margin-left: 5rem;
+    }     
 
-    #home-about .next-page {
+    .wrap-sticky .page-nav ul li:last-child{
+        opacity: 0.5;
+    }  
+
+    .wrap-sticky .next-page {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        bottom: 2rem;
-        right: 6rem;
         width: 89px;
         height: 89px;
         border-radius: 50%;
         border: 3px solid var(--black);
-    }   
+        top: calc(100vh - 14rem);
+        margin-left: calc(100% - 10rem);
+    } 
 
-    #home-about .next-page span:first-child{
+    .wrap-sticky .next-page span:first-child{
         font-size: 22px;
         text-decoration: underline;
         line-height: 22px;
     }   
 
-    #home-about .next-page span:last-child{
+    .wrap-sticky .next-page span:last-child{
         font-size: 17px;
         font-family: var(--roboto-regular);
-    }   
-    
-    #home-about .page-nav ul li:last-child{
-        opacity: 0.5;
-    }   
+    }    
 
     #home-about .andric{
         margin-bottom: 5rem;
@@ -551,7 +557,7 @@ header{
 
     #home-about .andric picture:first-child img{
         top: 56px;
-        left: -69px;
+        left: 9px;
     }
 
     #home-about p{

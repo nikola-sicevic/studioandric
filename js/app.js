@@ -35,4 +35,15 @@ $( document ).ready(function() {
             scrollTop: $("#home-about").offset().top
         }, 500);
     });
+
+    // Animate to the section clicked on the navigation on the home page
+    $('.home-nav').on("click", function (e) {
+        e.preventDefault();
+
+        let targetedSection = $(this).attr('href')
+
+        $('html, body').animate({
+            scrollTop: $(targetedSection).offset().top
+        }, 500);
+    });
 });
