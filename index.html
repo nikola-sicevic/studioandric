@@ -56,9 +56,9 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home page</a></li>
-                <li><a href="web_design.html">Web design</a></li>
-                <li><a href="graphic_design.html">Graphic design</a></li>
+                <li><a href="index.html" class="invert">Home page</a></li>
+                <li><a href="web_design.html" class="invert">Web design</a></li>
+                <li><a href="graphic_design.html" class="invert">Graphic design</a></li>
             </ul>
         </nav>
     </header>
@@ -130,5 +130,24 @@
             <a href="mailto:studioandric@gmail.com" data-aos="fade-up">studioandric@gmail.com</a>
         </section>
     </div>
+
+    <script>
+        // Inverse the color of the navigation if the background is white
+        $(window).on('resize scroll', function() {
+            let screenTop = $('body').scrollTop();
+            let windowHeight = window.innerHeight;
+
+            let navigation = $('#header-lg nav ul li a');
+            let logo = $('#logo-lg');
+
+            if (screenTop > windowHeight) {
+                navigation.removeClass('invert');
+                logo.css('opacity', 0);
+            } else {
+                navigation.addClass('invert');
+                logo.css('opacity', 1);
+            }
+        });
+    </script>
 </body>
 </html>

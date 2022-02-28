@@ -37,21 +37,4 @@ $( document ).ready(function() {
             scrollTop: $(targetedSection).offset().top
         }, 500);
     });
-
-    // Inverse the color of the navigation if the background is white
-    $(window).on('resize scroll', function() {
-        let screenTop = $('body').scrollTop();
-        let windowHeight = window.innerHeight;
-
-        let navigation = $('#header-lg nav ul li a');
-        let logo = $('#logo-lg');
-
-        if (screenTop > windowHeight) {
-            navigation.addClass('invert');
-            logo.css('opacity', 0);
-        } else {
-            navigation.removeClass('invert');
-            logo.css('opacity', 1);
-        }
-    });
 });

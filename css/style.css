@@ -475,7 +475,7 @@ header{
     }
 
     #header-lg nav ul li a{
-        color:var(--white);
+        color:var(--black);
     }
 
     /* home page desktop */
