@@ -69,6 +69,10 @@ p{
     margin: 0;
 }
 
+.invert {
+    filter: invert(1);
+}
+
 /* SPECIFIC STYLES */
 
 /* mobile header */
@@ -471,11 +475,7 @@ header{
     }
 
     #header-lg nav ul li a{
-        color: white;
-    }
-
-    #header-lg nav.inverse ul li a{
-        color: var(--black);
+        color:var(--white);
     }
 
     /* home page desktop */

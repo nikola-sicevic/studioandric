@@ -31,19 +31,27 @@ $( document ).ready(function() {
     $('.scroller').on("click", function (e) {
         e.preventDefault();
 
-        $('html, body').animate({
-            scrollTop: $("#home-about").offset().top
-        }, 500);
-    });
-
-    // Animate to the section clicked on the navigation on the home page
-    $('.home-nav').on("click", function (e) {
-        e.preventDefault();
-
-        let targetedSection = $(this).attr('href')
+        let targetedSection = $(this).attr('href');
 
         $('html, body').animate({
             scrollTop: $(targetedSection).offset().top
         }, 500);
+    });
+
+    // Inverse the color of the navigation if the background is white
+    $(window).on('resize scroll', function() {
+        let screenTop = $('body').scrollTop();
+        let windowHeight = window.innerHeight;
+
+        let navigation = $('#header-lg nav ul li a');
+        let logo = $('#logo-lg');
+
+        if (screenTop > windowHeight) {
+            navigation.addClass('invert');
+            logo.css('opacity', 0);
+        } else {
+            navigation.removeClass('invert');
+            logo.css('opacity', 1);
+        }
     });
 });
