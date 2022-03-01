@@ -69,8 +69,14 @@ p{
     margin: 0;
 }
 
+/* UTILITIES */
+
 .invert {
     filter: invert(1);
+}
+
+.low-opacity {
+    opacity: 0.5;
 }
 
 /* SPECIFIC STYLES */
@@ -509,8 +515,8 @@ header{
 
     .wrap-sticky .about-logo{
         display: block;
-        top: 5rem;
-        margin-top: 5rem;
+        top: 3rem;
+        margin-top: 3rem;
         margin-left: 5rem;
         
     }
@@ -521,10 +527,6 @@ header{
         font-family: var(--roboto-regular);
         top: calc(100vh - 15rem);
         margin-left: 5rem;
-    }     
-
-    .wrap-sticky .page-nav ul li:last-child{
-        opacity: 0.5;
     }  
 
     .wrap-sticky .next-page {

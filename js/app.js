@@ -37,4 +37,15 @@ $( document ).ready(function() {
             scrollTop: $(targetedSection).offset().top
         }, 500);
     });
+
+    // Chnage color of link when clicked
+    $('#page-nav .scroller').on('click', function() {
+        $(this).removeClass('low-opacity');
+
+        if ($(this).attr('id') == 'home-about-nav') {
+            $('#home-contact-nav').addClass('low-opacity');
+        } else {
+            $('#home-about-nav').addClass('low-opacity');
+        }
+    });
 });
