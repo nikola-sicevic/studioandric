@@ -1,9 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Andric | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +24,11 @@
             #header-sm{
                 position: absolute;
                 bottom: -37px;
+                @supports (-webkit-appearance:none) {
+                    .os-android & {
+                        bottom: -93px;
+                    }
+                }
             }
         }
     </style>
@@ -46,7 +55,7 @@
                     </li>
                 </ul>
             </nav>
-            <a href="mailto:studioandric@gmail.com" class="menu-sm-contact">studioandric@gmail.com</a>
+            <a href="mailto:contact@studioandric.com" class="menu-sm-contact">contact@studioandric.com</a>
         </div>
     </div>
 
@@ -127,26 +136,67 @@
                 <span class="background" data-aos="fade-up"></span>
             </div>
     
-            <a href="mailto:studioandric@gmail.com" data-aos="fade-up">studioandric@gmail.com</a>
+            <a href="mailto:contact@studioandric.com" data-aos="fade-up">contact@studioandric.com</a>
         </section>
     </div>
 
     <script>
-        // Inverse the color of the navigation if the background is white
-        $(window).on('resize scroll', function() {
-            let screenTop = $('body').scrollTop();
-            let windowHeight = window.innerHeight;
+        $(document).ready(function () {
+            let aboutSection = $('#home-about');
+            let aboutSectionOffset = aboutSection.offset().top;
+            let aboutSectionHeight = aboutSection.outerHeight();
 
-            let navigation = $('#header-lg nav ul li a');
-            let logo = $('#logo-lg');
+            let contactSection = $('#home-contact');
+            let contactSectionOffset = contactSection.offset().top;
+            let contactSectionHeight = contactSection.outerHeight();
 
-            if (screenTop > windowHeight) {
-                navigation.removeClass('invert');
-                logo.css('opacity', 0);
-            } else {
-                navigation.addClass('invert');
-                logo.css('opacity', 1);
+            // Inverse the color of the navigation if the background is white
+            function invertNavigationColor(screenTop) {
+                let windowHeight = window.innerHeight;
+
+                let navigation = $('#header-lg nav ul li a');
+                let logo = $('#logo-lg');
+
+                if (screenTop > windowHeight) {
+                    navigation.removeClass('invert');
+                    logo.css('opacity', 0);
+                } else {
+                    navigation.addClass('invert');
+                    logo.css('opacity', 1);
+                }
             }
+
+            // Change color of link when on screen
+            function switchLinkColor(screenTop) {
+                let aboutNav = $('#home-about-nav');
+                let contactNav = $('#home-contact-nav');
+
+                if (screenTop <= contactSectionOffset - aboutSectionHeight / 2) {
+                    aboutNav.removeClass('low-opacity');
+                    contactNav.addClass('low-opacity');
+                } else {
+                    aboutNav.addClass('low-opacity');
+                    contactNav.removeClass('low-opacity');
+                }
+            }
+            
+            $(window).on('resize scroll', function() {
+                let screenTop = $(this).scrollTop();
+                
+                invertNavigationColor(screenTop);
+                switchLinkColor(screenTop);
+            });
+
+            // Animate to the next section when clicked on "more" on the home page
+            $('.scroller').on("click", function (e) {
+                e.preventDefault();
+
+                let targetedSection = $(this).attr('href');
+
+                $('html, body').animate({
+                    scrollTop: $(targetedSection).offset().top
+                }, 500);
+            });
         });
     </script>
 </body>

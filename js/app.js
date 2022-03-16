@@ -26,26 +26,4 @@ $( document ).ready(function() {
     setTimeout(() => {
         $(".fade-in").fadeIn(1250);
     }, 300);
-
-    // Animate to the next section when clicked on "more" on the home page
-    $('.scroller').on("click", function (e) {
-        e.preventDefault();
-
-        let targetedSection = $(this).attr('href');
-
-        $('html, body').animate({
-            scrollTop: $(targetedSection).offset().top
-        }, 500);
-    });
-
-    // Chnage color of link when clicked
-    $('#page-nav .scroller').on('click', function() {
-        $(this).removeClass('low-opacity');
-
-        if ($(this).attr('id') == 'home-about-nav') {
-            $('#home-contact-nav').addClass('low-opacity');
-        } else {
-            $('#home-about-nav').addClass('low-opacity');
-        }
-    });
 });

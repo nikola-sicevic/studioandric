@@ -1,9 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Andric | Web Design</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,34 +73,99 @@
     </section>
 
     <section class="projects" id="projects">
-        <div class="project" id="project">
-            <div class="project-full-page" id="project-full-page">
-                <picture>
-                    <source media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_page_lg.png">
-                    <img src="img/web/listovi_nepokretnosti_page_sm.png" alt="Listovi nepokretnosti page">
-                </picture>
-            </div>
-            <div class="project-landing-section" id="project-landing-section">
-                <picture>
-                    <source media="(min-width: 768px)" srcset="img/computer_lg.png">
-                    <img src="img/computer_sm.png" alt="Computer">
-                </picture>
+        <div class="project-page" id="project-page">
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_page_lg.png">
+                <img src="img/web/listovi_nepokretnosti_page_sm.png" alt="Listovi nepokretnosti page">
+            </picture>
 
-                <picture>
-                    <source media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_lg.png">
-                    <img src="img/web/listovi_nepokretnosti_sm.png" alt="Listovi nepokretnosti landing">
-                </picture>
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/web/ribarnica_page_lg.png">
+                <img src="img/web/ribarnica_page_sm.png" alt="Ribarnica">
+            </picture>
 
-                <p class="web-text" data-aos="fade-up">
-                    We believe in creating designs which narrate our clients’ stories and their business objective clearly. 
-                    Understanding the client's requirements, their business and product goals are at the core of our extensively detailed design process.
-                </p>
-            </div>
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/web/tijana_vukan_page_lg.png">
+                <img src="img/web/tijana_vukan_page_sm.png" alt="Tijana Vukan">
+            </picture>
 
-            <div class="web-design" id="web-design">
-                <img src="img/web/web_design_lg.png" alt="Web design">
-            </div>
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/web/vi_athlete_page_lg.png">
+                <img src="img/web/vi_athlete_page_sm.png" alt="VI athlete">
+            </picture>
+        </div>
+        <div class="project-landing" id="project-landing">
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/computer_lg.png">
+                <img src="img/computer_sm.png" alt="Computer">
+            </picture>
+
+            <picture>
+                <source id="mobile-landing" media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_lg.png">
+                <img id="desktop-landing" src="img/web/listovi_nepokretnosti_sm.png" alt="Listovi nepokretnosti landing">
+            </picture>
+
+            <p class="web-text" data-aos="fade-up">
+                We believe in creating designs which narrate our clients’ stories and their business objective clearly. 
+                Understanding the client's requirements, their business and product goals are at the core of our extensively detailed design process.
+            </p>
+        </div>
+        <div class="web-design" id="web-design">
+            <p>Web design</p>
         </div>
     </section>
+
+    <!-- Import images array -->
+    <script type="text/javascript" language="javascript" src="images.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#project-landing picture:nth-child(2) img').on('click', function(){
+                $(this).attr("src", "img/web/ribarnica_lg.png");
+
+                console.log($(this).attr("src"));
+            });
+
+            const imagePath = 'img/web/';
+
+            // Set iterator for going through images
+            let i = 0;
+
+            // Change screen image
+            function changeScreenImage(i) {
+                let mobileUrl = imagePath + images[i].mobile.landingName;
+                let desktopUrl = imagePath + images[i].desktop.landingName;
+
+                let dekstopImageElement= $('#project-landing picture:nth-child(2) source');
+                let mobileImageElement= $('#project-landing picture:nth-child(2) img');
+
+                dekstopImageElement.attr('srcset', desktopUrl);
+                mobileImageElement.attr('src', mobileUrl);
+            }
+
+            $('#projects').on('scroll', function (e) {
+                let screen = ($(window).width() > 768) ? "desktop" : "mobile";
+
+                let screenTop = $(this).scrollTop();
+
+                // When scrollTop is on the half of the next image, change screen image
+                if (screenTop > images[0][screen].totalBottom - images[1][screen].height / 2) {
+                    if (screenTop > images[1][screen].totalBottom - images[1][screen].height / 2) {
+                        if (screenTop > images[2][screen].totalBottom - images[3][screen].height) {
+                            i = 3;
+                        } else {
+                            i = 2;
+                        }
+                    } else {
+                        i = 1;
+                    }
+                } else {
+                    i = 0;
+                }
+
+                changeScreenImage(i);
+            });
+        });
+    </script>
 </body>
 </html>
