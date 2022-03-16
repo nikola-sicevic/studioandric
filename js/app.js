@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    // Normalize screen width
-    
     // Initialize AOS for fade in animations
     AOS.init({
         duration: 1200
