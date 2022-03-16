@@ -34,13 +34,10 @@
 
 html,
 body {
-    height: 100vh;
-}
-
-body{
     margin: 0;
+    height: 100vh;
     font-family: var(--roboto-bold);
-    min-width: 360px;
+    min-width: 320px;
     min-height: 640px;
 }
 
@@ -330,7 +327,7 @@ header{
     position: sticky;
     margin-top: 100px;
     top: 100px;
-    margin-left: calc(50% - 55px);
+    margin-left: calc(50% - 40px);
     z-index: 3;
 }
 
@@ -347,12 +344,30 @@ header{
 #projects .web-design{
     position: sticky;
     z-index: 1;
-    top: 140px;
+    width: 100%;
+    margin-top: 150%;
+    top: 150%;
+    margin-left: 100px;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    animation: bottomTop 10s linear 0s infinite normal;
+}
+
+@keyframes bottomTop {
+    from {
+        margin-top: 150%;
+        top: 150%;
+    }
+  
+    to {
+        margin-top: -300%;
+        top: -300%;
+    }
 }
 
 #projects .web-design p{
     color: var(--gray-letter);
-    font-size: 50px;
+    font-size: 120px;
 }
 
 /* graphic design page */
@@ -639,6 +654,7 @@ header{
     
     #projects{
         height: 100vh;
+        padding: 0;
     }
     
     #projects .project-page{
@@ -667,6 +683,19 @@ header{
 
     #projects .web-design{
         top: 220px;
+        margin-left: 100%;
+        transform: none;
+        animation: rightLeft 15s linear 0s infinite normal;
+    }
+
+    @keyframes rightLeft {
+        from {
+          margin-left: 100%;
+        }
+      
+        to {
+          margin-left: -100%;
+        }
     }
 
     #projects .web-design p{
