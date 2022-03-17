@@ -1,8 +1,9 @@
 $(document).ready(function() {
     // Initialize AOS for fade in animations
     AOS.init({
-        duration: 1200
-    })
+        duration: 1200,
+        offset: 0
+    });
 
     // Open navigation for mobile phones
     $('#btn-menu-open').click(function(e) {

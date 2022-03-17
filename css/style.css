@@ -88,13 +88,13 @@ p{
 header{
     position: fixed;
     width: calc(100% - 4rem);
-    height: 37px;
+    height: 57px;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 3px 3px 0 var(--shadow);
-    font-size: 12px;
+    font-size: 14px;
     background-color: var(--white);
     z-index: 4;
 }
@@ -203,7 +203,7 @@ header{
     display: block;
     position: absolute;
     transform: translateY(-50%);
-    bottom: 2rem;
+    bottom: 5rem;
     color: var(--white);
     border-radius: 50%;
     text-align: center;

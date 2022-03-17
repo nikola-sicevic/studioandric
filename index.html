@@ -127,6 +127,7 @@
             </p>
         </section>
     
+        <!-- Outro text for the home page -->
         <section class="home-contact" id="home-contact">
             <div class="text">
                 <p data-aos="fade-up">
@@ -193,7 +194,7 @@
                 let targetedSection = $(this).attr('href');
 
                 $('html, body').animate({
-                    scrollTop: $(targetedSection).offset().top
+                    scrollTop: $(targetedSection).offset().top - parseInt($(targetedSection).css('margin-top'))
                 }, 500);
             });
         });
