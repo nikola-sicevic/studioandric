@@ -83,33 +83,33 @@
         <div class="project-page" id="project-page">
             <picture>
                 <source media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_page_lg.png">
-                <img src="img/web/listovi_nepokretnosti_page_sm.png" alt="Listovi nepokretnosti page">
+                <img src="img/web/listovi_nepokretnosti_page_lg.png" alt="Listovi nepokretnosti">
             </picture>
 
             <picture>
                 <source media="(min-width: 768px)" srcset="img/web/ribarnica_page_lg.png">
-                <img src="img/web/ribarnica_page_sm.png" alt="Ribarnica">
+                <img src="img/web/ribarnica_page_lg.png" alt="Ribarnica">
             </picture>
 
             <picture>
                 <source media="(min-width: 768px)" srcset="img/web/tijana_vukan_page_lg.png">
-                <img src="img/web/tijana_vukan_page_sm.png" alt="Tijana Vukan">
+                <img src="img/web/tijana_vukan_page_lg.png" alt="Tijana Vukan">
             </picture>
 
             <picture>
                 <source media="(min-width: 768px)" srcset="img/web/vi_athlete_page_lg.png">
-                <img src="img/web/vi_athlete_page_sm.png" alt="VI athlete">
+                <img src="img/web/vi_athlete_page_lg.png" alt="VI athlete">
             </picture>
         </div>
         <div class="project-landing" id="project-landing">
             <picture>
                 <source media="(min-width: 768px)" srcset="img/computer_lg.png">
-                <img src="img/computer_sm.png" alt="Computer">
+                <img src="img/computer_lg.png" alt="Computer">
             </picture>
 
             <picture>
                 <source id="mobile-landing" media="(min-width: 768px)" srcset="img/web/listovi_nepokretnosti_lg.png">
-                <img id="desktop-landing" src="img/web/listovi_nepokretnosti_sm.png" alt="Listovi nepokretnosti landing">
+                <img id="desktop-landing" src="img/web/listovi_nepokretnosti_lg.png" alt="Listovi nepokretnosti landing">
             </picture>
 
             <p class="web-text" data-aos="fade-up">
@@ -118,7 +118,11 @@
             </p>
         </div>
         <div class="web-design" id="web-design">
-            <p>Web design</p>
+            <p>
+                <span>Web design</span>
+                <span>Web design</span>
+                <span>Web design</span>
+            </p>
         </div>
     </section>
 
@@ -127,12 +131,6 @@
 
     <script>
         $(document).ready(function () {
-            $('#project-landing picture:nth-child(2) img').on('click', function(){
-                $(this).attr("src", "img/web/ribarnica_lg.png");
-
-                console.log($(this).attr("src"));
-            });
-
             const imagePath = 'img/web/';
 
             // Set iterator for going through images

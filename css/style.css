@@ -305,36 +305,49 @@ header{
 }
 
 #projects .project-page{
-    width: 135px;
+    width: 275px;
     position: absolute;
-    left: calc(50% - 125px);
+    left: 25%;
     z-index: 2;
-    box-shadow: 0 2px 20px 0 var(--shadow-dark);
 }
 
 #projects .project-page picture{
     display: block;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     overflow-x: hidden;
+    box-shadow: 0 -15px 20px 0 var(--shadow-dark);
 }
 
 #projects .project-page picture:last-child{
     margin-bottom: 0;
 }
 
+#projects .project-page picture img,
+#projects .project-page picture source{
+    width: 100%;
+}
+
 #projects .project-landing{
     position: sticky;
-    margin-top: 100px;
-    top: 100px;
-    margin-left: calc(50% - 40px);
+    margin-top: calc(50% - 130px);
+    top: calc(50% - 130px);
+    margin-left: calc(50% - 80px);
     z-index: 3;
+}
+
+#projects .project-landing picture:nth-child(1) img{
+    width: 300px;
 }
 
 #projects .project-landing picture:nth-child(2){
     position: absolute;
-    top: 7px;
-    left: 7px;
+    top: 10px;
+    left: 10px;
+}
+
+#projects .project-landing picture:nth-child(2) img{
+    width: 280px;
 }
 
 #projects .project-landing .web-text{
@@ -351,6 +364,7 @@ header{
     white-space: nowrap;
     transform: rotate(90deg);
     animation: bottomTop 10s linear 0s infinite normal;
+    display: none;
 }
 
 @keyframes bottomTop {
@@ -360,14 +374,18 @@ header{
     }
   
     to {
-        margin-top: -300%;
-        top: -300%;
+        margin-top: -450%;
+        top: -450%;
     }
 }
 
 #projects .web-design p{
     color: var(--gray-letter);
-    font-size: 120px;
+    font-size: 150px;
+}
+
+#projects .web-design p span{
+    margin-right: 200px;
 }
 
 /* graphic design page */
@@ -658,8 +676,12 @@ header{
     }
     
     #projects .project-page{
-        width: 445px;
-        left: calc(50% - 455px);
+        width: 500px;
+        left: calc(50% - 500px);
+    }
+
+    #projects .project-page picture{
+        margin-bottom: 290px;
     }
     
     #projects .project-landing{
@@ -673,6 +695,14 @@ header{
         left: 24px;
     }
 
+    #projects .project-landing picture:nth-child(1) img{
+        width: 675px;
+    }
+    
+    #projects .project-landing picture:nth-child(2) img{
+        width: 625px;
+    }
+
     #projects .project-landing .web-text{
         width: 440px;
         display: block;
@@ -682,6 +712,7 @@ header{
     }
 
     #projects .web-design{
+        display: block;
         top: 220px;
         margin-top: -460px;
         margin-left: 100%;
@@ -695,12 +726,12 @@ header{
         }
       
         to {
-          margin-left: -100%;
+          margin-left: -375%;
         }
     }
 
     #projects .web-design p{
-        font-size: 240px;
+        font-size: 290px;
     }
 
     /* graphic design page desktop */
@@ -749,15 +780,15 @@ header{
     
     #graphic-end p:first-child{
         font-size: 80px;
-        line-height: 70px;
+        line-height: 80px;
         letter-spacing: 2px;
-        margin-left: 10rem;
+        margin-left: 15rem;
     }
     
     #graphic-end p:last-child{
         margin-top: 7.5rem;
         font-size: 20px;
-        margin-left: 10rem;
+        margin-left: 15rem;
     }
     
     #graphic-end p:last-child .line{
