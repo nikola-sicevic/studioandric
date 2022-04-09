@@ -305,9 +305,9 @@ header{
 }
 
 #projects .project-page{
-    width: 275px;
+    width: 200px;
     position: absolute;
-    left: 25%;
+    left: 10%;
     z-index: 2;
 }
 
@@ -337,17 +337,17 @@ header{
 }
 
 #projects .project-landing picture:nth-child(1) img{
-    width: 300px;
+    width: 225px;
 }
 
 #projects .project-landing picture:nth-child(2){
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 8px;
 }
 
 #projects .project-landing picture:nth-child(2) img{
-    width: 280px;
+    width: 209px;
 }
 
 #projects .project-landing .web-text{

@@ -4,9 +4,9 @@ let images = [
         "mobile": {
             "pageName": "listovi_nepokretnosti_page_lg.png",
             "landingName": "listovi_nepokretnosti_lg.png",
-            "height": 469,
+            "height": 695,
             "padding": 100,
-            "totalBottom": 569
+            "totalBottom": 795
         },
         "desktop": {
             "pageName": "listovi_nepokretnosti_page_lg.png",
@@ -21,9 +21,9 @@ let images = [
         "mobile": {
             "pageName": "ribarnica_page_lg.png",
             "landingName": "ribarnica_lg.png",
-            "height": 1265,
+            "height": 507,
             "padding": 100,
-            "totalBottom": 2400
+            "totalBottom": 1402
         },
         "desktop": {
             "pageName": "ribarnica_page_lg.png",
@@ -38,9 +38,9 @@ let images = [
         "mobile": {
             "pageName": "tijana_vukan_page_lg.png",
             "landingName": "tijana_vukan_lg.png",
-            "height": 1357,
+            "height": 987,
             "padding": 0,
-            "totalBottom": 3757
+            "totalBottom": 2389
         },
         "desktop": {
             "pageName": "tijana_vukan_page_lg.png",
@@ -55,9 +55,9 @@ let images = [
         "mobile": {
             "pageName": "vi_athlete_page_lg.png",
             "landingName": "vi_athlete_lg.png",
-            "height": 717,
+            "height": 521,
             "padding": 0,
-            "totalBottom": 5728
+            "totalBottom": 2910
         },
         "desktop": {
             "pageName": "vi_athlete_page_lg.png",
