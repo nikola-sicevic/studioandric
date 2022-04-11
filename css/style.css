@@ -316,7 +316,7 @@ header{
     width: 100%;
     margin-bottom: 100px;
     overflow-x: hidden;
-    box-shadow: 0 -15px 20px 0 var(--shadow-dark);
+    box-shadow: 0 -10px 20px -5px var(--shadow-dark);
 }
 
 #projects .project-page picture:last-child{
@@ -330,14 +330,14 @@ header{
 
 #projects .project-landing{
     position: sticky;
-    margin-top: calc(50% - 130px);
-    top: calc(50% - 130px);
-    margin-left: calc(50% - 80px);
+    margin-top: calc(50% - 150px);
+    top: calc(50% - 150px);
+    margin-left: calc(50% - 130px);
     z-index: 3;
 }
 
 #projects .project-landing picture:nth-child(1) img{
-    width: 225px;
+    width: 280px;
 }
 
 #projects .project-landing picture:nth-child(2){
@@ -347,7 +347,7 @@ header{
 }
 
 #projects .project-landing picture:nth-child(2) img{
-    width: 209px;
+    width: 263px;
 }
 
 #projects .project-landing .web-text{

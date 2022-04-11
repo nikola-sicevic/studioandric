@@ -131,44 +131,71 @@
 
     <script>
         $(document).ready(function () {
-            const imagePath = 'img/web/';
+            // Create the array with all images. Each item should have image src and poition of its top in relation to top scroll
+            let imageElements = $('#project-page picture img');
+            let imageArray = [];
+            let currentImageIndex = 0;
+            
+            // Temporary holder or the current positionBottom of the img element
+            let currentPositionBottom = 0;
 
-            // Set iterator for going through images
-            let i = 0;
+            // For this to work, all images MUST follow the same naming convention
+            imageElements.each(function (index, value) {
+                let element = $(this);
 
-            // Change screen image
-            function changeScreenImage(i) {
-                let mobileUrl = imagePath + images[i].mobile.landingName;
-                let desktopUrl = imagePath + images[i].desktop.landingName;
+                let fullPageImgName = element.attr('src');
+                let screenImgName = fullPageImgName.replace("_page", "");
+                
+                currentPositionBottom += element.height() + 100;
 
-                let dekstopImageElement= $('#project-landing picture:nth-child(2) source');
-                let mobileImageElement= $('#project-landing picture:nth-child(2) img');
+                imageArray.push({
+                    'fullPageImgName': fullPageImgName, 
+                    'screenImgName': screenImgName,
+                    'positionBottom': currentPositionBottom
+                });
+            });
 
-                dekstopImageElement.attr('srcset', desktopUrl);
-                mobileImageElement.attr('src', mobileUrl);
-            }
+            // Variable that holds last scroll value
+            let lastScrollTop = 0;
 
+            // On scroll inside of #projects element
             $('#projects').on('scroll', function (e) {
-                let screen = ($(window).width() > 768) ? "desktop" : "mobile";
+                // Get the current value of the scroll
+                let scrollTop = $(this).scrollTop();
 
-                let screenTop = $(this).scrollTop();
+                // Check is the scroll direction up or down
+                if (scrollTop > lastScrollTop){
+                    // SCROLL IS DOWN
 
-                // When scrollTop is on the half of the next image, change screen image
-                if (screenTop > images[0][screen].totalBottom - images[1][screen].height / 2) {
-                    if (screenTop > images[1][screen].totalBottom - images[1][screen].height / 2) {
-                        if (screenTop > images[2][screen].totalBottom - images[3][screen].height) {
-                            i = 3;
-                        } else {
-                            i = 2;
-                        }
-                    } else {
-                        i = 1;
+                    // Check if there is next image and if the current scroll came to its top poition
+                    if (imageArray[currentImageIndex + 1] && imageArray[currentImageIndex].positionBottom - 300 < scrollTop) {
+                        // Change index of the current image to the next one in the array
+                        currentImageIndex++;
+
+                        // Change desktop image
+                        $('#project-landing picture:nth-child(2) source').attr('srcset', imageArray[currentImageIndex].screenImgName);
+
+                        // Change mobile image
+                        $('#project-landing picture:nth-child(2) img').attr('src', imageArray[currentImageIndex].screenImgName);
                     }
                 } else {
-                    i = 0;
+                    // SCROLL IS UP
+
+                    // Check if there is next image and if the current scroll came to its top poition
+                    if (imageArray[currentImageIndex - 1] && imageArray[currentImageIndex - 1].positionBottom - 300 > scrollTop) {
+                        // Change index of the current image to the next one in the array
+                        currentImageIndex--;
+
+                        // Change desktop image
+                        $('#project-landing picture:nth-child(2) source').attr('srcset', imageArray[currentImageIndex].screenImgName);
+
+                        // Change mobile image
+                        $('#project-landing picture:nth-child(2) img').attr('src', imageArray[currentImageIndex].screenImgName);
+                    }
                 }
 
-                changeScreenImage(i);
+                // Set current scroll value to the last scroll value so the direction could be determined in the next scroll
+                lastScrollTop = scrollTop;
             });
         });
     </script>
