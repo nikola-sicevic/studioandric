@@ -181,9 +181,9 @@
                 } else {
                     // SCROLL IS UP
 
-                    // Check if there is next image and if the current scroll came to its top poition
+                    // Check if there is previous image and if the current scroll came to its top poition
                     if (imageArray[currentImageIndex - 1] && imageArray[currentImageIndex - 1].positionBottom - 300 > scrollTop) {
-                        // Change index of the current image to the next one in the array
+                        // Change index of the current image to the previous one in the array
                         currentImageIndex--;
 
                         // Change desktop image
