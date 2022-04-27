@@ -24,6 +24,7 @@
     --shadow: #E8E8E8;
     --shadow-dark: #C4C4C4;
     --gray-letter: #E0E0E0;
+    --gray-letter-light: #F2F2F2; 
     --gray-box: #E6E6E6;
     /* fonts */
     --roboto-bold: "RobotoBold", Arial, Helvetica, sans-serif;
@@ -173,7 +174,7 @@ header{
 .home-white picture img,
 #home-black picture:nth-child(1) img {
     width: 50%;
-    margin: 0 25%;
+    margin: -25% 25% 0 25%;
 }
 
 /* PAGES */
@@ -194,7 +195,7 @@ header{
 
 #home-black picture:nth-child(2) img{
     position: absolute;
-    top: .75rem;
+    top: 2rem;
     left: 1rem;
 }
 
@@ -214,7 +215,7 @@ header{
 
 #home-about{
     padding: 0 4rem;
-    margin-top: 8rem;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +249,7 @@ header{
 }
 
 #home-contact{
-    height: 500px;
+    height: 350px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -282,7 +283,6 @@ header{
 }
 
 #home-contact a{
-    margin-top: -80px;
     margin-right: -10px;
     align-self: center;
 }
@@ -316,11 +316,7 @@ header{
     width: 100%;
     margin-bottom: 100px;
     overflow-x: hidden;
-    box-shadow: 0 -10px 20px -5px var(--shadow-dark);
-}
-
-#projects .project-page picture:last-child{
-    margin-bottom: 0;
+    box-shadow: 0 0 20px 5px var(--shadow-dark);
 }
 
 #projects .project-page picture img,
@@ -380,7 +376,7 @@ header{
 }
 
 #projects .web-design p{
-    color: var(--gray-letter);
+    color: var(--gray-letter-light);
     font-size: 150px;
 }
 
@@ -681,7 +677,7 @@ header{
     }
 
     #projects .project-page picture{
-        margin-bottom: 290px;
+        margin-bottom: 310px;
     }
     
     #projects .project-landing{
@@ -717,7 +713,7 @@ header{
         margin-top: -460px;
         margin-left: 100%;
         transform: none;
-        animation: rightLeft 15s linear 0s infinite normal;
+        animation: rightLeft 30s linear 0s infinite normal;
     }
 
     @keyframes rightLeft {
@@ -731,7 +727,7 @@ header{
     }
 
     #projects .web-design p{
-        font-size: 290px;
+        font-size: 370px;
     }
 
     /* graphic design page desktop */
